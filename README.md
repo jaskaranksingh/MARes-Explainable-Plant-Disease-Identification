@@ -68,6 +68,3 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 =======
-# MARes-Explainable-Plant-Disease-Identification
-Plant disease detection using convolutional neural networks enhanced by Multi-Attention Residual loss, with GradCAM-based interpretable visualizations
->>>>>>> a24b67aa73f4bc61ecef5931ef6124e4342baf80
