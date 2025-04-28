@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Interpretable Plant Disease Classification through Multi-Attention Residual Loss Based Network
 
 This project presents a deep learning framework for the classification of plant diseases, utilizing convolutional neural networks (CNNs) enhanced with a Multi-Attention Residual (MARes) loss function. To improve the transparency of predictions, explainable artificial intelligence (XAI) techniques are integrated, generating interpretable visualizations of model decisions.
@@ -67,3 +68,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 pip install -r requirements.txt
+=======
+# MARes-Explainable-Plant-Disease-Identification
+Plant disease detection using convolutional neural networks enhanced by Multi-Attention Residual loss, with GradCAM-based interpretable visualizations
+>>>>>>> a24b67aa73f4bc61ecef5931ef6124e4342baf80
