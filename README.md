@@ -7,13 +7,6 @@ A deep learning framework for plant disease classification, enhanced by Channel 
 This project addresses the challenge of interpreting deep learning models for agricultural disease diagnosis.  
 We propose CNN-based models integrated with attention mechanisms and a custom-designed MARes loss to improve both model performance and interpretability.
 
-Key methods include:
-- Channel Attention modules to prioritize important spatial features.
-- MARes loss function for enhanced feature learning and generalization.
-- GradCAM-based XAI visualizations for model interpretability.
-
----
-
 ## Key Features
 
 - Binary classification (Healthy vs Diseased) across Tomato, Apple, and PlantVillage datasets.
