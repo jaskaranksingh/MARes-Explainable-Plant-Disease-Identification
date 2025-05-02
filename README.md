@@ -2,48 +2,38 @@
 
 A deep learning framework for plant disease classification, enhanced by Channel Attention modules and optimized with a novel Multi-Attention Residual (MARes) loss function. The framework also integrates explainable AI (XAI) techniques such as GradCAM to visualize model predictions.
 
-## 1. Introduction
+## About the Project
 
-The early identification of plant diseases is vital for protecting agricultural yields and ensuring food security. Deep learning methods, particularly CNNs, have demonstrated effectiveness in automating plant disease recognition. However, the interpretability of these models remains a challenge. This work introduces a MARes loss-based approach, coupled with XAI, to enhance classification performance and model explainability.
+This project addresses the challenge of interpreting deep learning models for agricultural disease diagnosis.  
+We propose CNN-based models integrated with attention mechanisms and a custom-designed MARes loss to improve both model performance and interpretability.
 
-## 2. Objectives
+Key methods include:
+- Channel Attention modules to prioritize important spatial features.
+- MARes loss function for enhanced feature learning and generalization.
+- GradCAM-based XAI visualizations for model interpretability.
 
-- Develop CNN models capable of binary classification between healthy and diseased plant leaves.
-- Introduce a Multi-Attention Residual (MARes) loss function to improve feature learning.
-- Generate visual explanations using GradCAM to interpret model decisions.
-- Evaluate model generalization across datasets using cross-validation and external testing.
+---
 
-## 3. Model Architecture
+## Key Features
 
-The models are based on ResNet architectures (ResNet18, ResNet50, ResNet152), optionally incorporating Channel Attention modules. The classification layers are trained using the proposed MARes loss function to better capture disease-related features.
+- Binary classification (Healthy vs Diseased) across Tomato, Apple, and PlantVillage datasets.
+- Integration of attention modules into standard ResNet architectures (18, 50, 152 layers).
+- Custom MARes Loss combining classification, skip supervision, and output regularization.
+- GradCAM explainability pipeline for visual verification of model predictions.
+- Support for cross-dataset generalization experiments and statistical evaluation.
 
-An overview of the architecture:
+---
+
+## Model Overview
+
+The core architecture is based on ResNet backbones, optionally enhanced with Channel Attention modules.  
+Training uses the MARes loss, combining cross-entropy loss, residual feature supervision, and L2 regularization.
 
 <img src="assets/atten-1.png" width="600"/>
 
+---
 
-## 4. Datasets
-
-Three datasets are utilized in this study:
-
-- **Tomato Dataset**: Healthy and diseased tomato leaf images, organized for binary classification.
-- **Apple Dataset**: Healthy and diseased apple leaf images, organized for binary classification.
-- **PlantVillage Dataset**: Multi-crop plant images adapted for binary classification per species.
-
-A data conversion script is provided to automate the grouping of multiple disease categories under a single "Diseased" label for each crop.
-
-## 5. Preprocessing
-
-All input images undergo the following preprocessing steps:
-
-- Resizing to **224 × 224 pixels**.
-- Normalization using ImageNet mean and standard deviation:
-  - Mean: [0.485, 0.456, 0.406]
-  - Standard Deviation: [0.229, 0.224, 0.225]
-
-This ensures consistency across models and datasets.
-
-## 6. Explainable AI (XAI) Visualizations
+## Explainable AI (XAI) Visualizations
 
 GradCAM is employed to produce heatmaps that highlight image regions most influential in classification decisions.
 
@@ -55,7 +45,21 @@ Representative examples:
 | <img src="assets/Img3_original.png" width="250"/> | <img src="assets/Img3_Heatmap.png" width="250"/> | <img src="assets/Img3_finalXAI.png" width="250"/> |
 | <img src="assets/tom_img3.png" width="250"/> | <img src="assets/tom_img3_heatmap.png" width="250"/> | <img src="assets/tom_img3_combined.png" width="250"/> |
 
-## 7. Installation
+---
+
+## Datasets
+
+Three datasets are utilized in this study:
+
+- **Tomato Dataset**: Healthy and diseased tomato leaf images, organized for binary classification.
+- **Apple Dataset**: Healthy and diseased apple leaf images, organized for binary classification.
+- **PlantVillage Dataset**: Multi-crop plant images adapted for binary classification per species.
+
+A data conversion script is provided to automate the grouping of multiple disease categories under a single "Diseased" label for each crop.
+
+---
+
+## Installation
 
 Clone the repository and install the necessary dependencies:
 
