@@ -1,0 +1,8 @@
+dataset: data/apple_binary
+model: resnet50
+loss: beta_mares
+use_attention: true
+batch_size: 32
+epochs: 40
+lr: 0.0001
+cross_val: false

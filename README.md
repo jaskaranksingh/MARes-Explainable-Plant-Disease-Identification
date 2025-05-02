@@ -60,7 +60,7 @@ Representative examples:
 Clone the repository and install the necessary dependencies:
 
 ```bash
-git clone https://github.com/your_username/plant-disease-mares-xai.git
+git clone https://github.com/jaskaranksingh/MARes-Explainable-Plant-Disease-Identification.git
 cd plant-disease-mares-xai
 
 python3 -m venv venv
